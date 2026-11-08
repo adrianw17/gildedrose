@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Updater</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/app.js" defer></script>
+</head>
+<body>
+<main class="container">
+    <h1>Inventory Updater</h1>
+    <p>Enter your inventory items and update their quality.</p>
+
+    <section class="panel">
+        <div class="section-heading">
+            <h2>Inventory Items</h2>
+            <button id="add-item-button" type="button">Add Item</button>
+        </div>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Sell In</th>
+                <th>Quality</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+
+            <tbody id="inventory-body">
+            <tr class="inventory-row">
+                <td>
+                    <input type="text" class="item-name" placeholder="e.g. Aged Brie" value="Aged Brie" />
+                </td>
+                <td>
+                    <input type="number" class="item-sell-in" value="1" />
+                </td>
+                <td>
+                    <input type="number" class="item-quality" value="1" />
+                </td>
+                <td>
+                    <button type="button" class="remove-item-button">Remove</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <button id="update-button" type="button">Update Inventory</button>
+
+        <p id="status-message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="result-section" class="panel" hidden>
+        <h2>Updated Inventory</h2>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Sell In</th>
+                <th>Quality</th>
+            </tr>
+            </thead>
+
+            <tbody id="results-body"></tbody>
+        </table>
+    </section>
+</main>
+</body>
+</html>
